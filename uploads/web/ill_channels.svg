@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 64">
+<style>
+.s{fill:none;stroke:#0B0B0C;stroke-width:1.3;stroke-linecap:round}
+.room{stroke-opacity:.3}
+.ch{animation:flow 3.2s linear infinite,lit 4.8s linear infinite}
+.c1{stroke-dasharray:12 5}
+.c2{stroke-dasharray:4 4;animation-delay:-.9s,-1.6s}
+.c3{stroke-dasharray:17 6;animation-delay:-1.8s,-3.2s}
+@keyframes flow{to{stroke-dashoffset:-34}}
+@keyframes lit{0%,20%{stroke-opacity:1}30%,100%{stroke-opacity:.22}}
+.dot{fill:#0B0B0C;transform-box:view-box;transform-origin:0 0;animation:hop 4.8s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes hop{0%,20%{transform:translateY(0)}33%,53%{transform:translateY(13px)}66%,86%{transform:translateY(26px)}100%{transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){.ch,.dot{animation:none}.ch{stroke-opacity:.5}}
+</style>
+<rect class="s room" x="5" y="7" width="122" height="50" rx="8"/>
+<path class="s ch c1" d="M30 19h84"/>
+<path class="s ch c2" d="M30 32h84"/>
+<path class="s ch c3" d="M30 45h84"/>
+<circle class="dot" cx="19" cy="19" r="3.4"/>
+</svg>
