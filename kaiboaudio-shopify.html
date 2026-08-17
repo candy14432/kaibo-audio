@@ -142,6 +142,10 @@
     #products, #technology, #contact { padding-top: 84px !important; padding-bottom: 84px !important; }
     /* the merged contact band ends with its own footer row, which supplies the bottom edge */
     #contact { padding-bottom: 0 !important; }
+    /* Stacked, the band is taller than the fold, so margin-top:auto has no
+       slack left to push the footer down and its rule lands flush against
+       the form. Give the row its own gap. */
+    #contact .contact-grid { margin-bottom: 56px !important; }
   }
   /* ---- Primary nav: three ranges, each with a plain black dropdown ---- */
   .kb-nav-item { position: relative; }
