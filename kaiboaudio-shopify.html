@@ -301,8 +301,8 @@
 <section id="scenes" style="background:#0B0B0C">
 
   <div class="snap scene" data-play-in-view="" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);height:100vh;height:100dvh;min-height:640px;border-top:1px solid rgba(255,255,255,0.1)">
-    <div class="scene-media" style="position:relative;background:#141416;overflow:hidden">
-      <video src="uploads/shot2_v3.mp4" muted="muted" loop="loop" playsinline="playsinline" poster="uploads/poster-lounge.jpg" preload="auto" style="width:100%;height:100%;object-fit:cover;object-position:60% 50%;display:block"></video>
+    <div class="scene-media" style="position:relative;background:#141416;background-image:url(uploads/poster-lounge.jpg);background-size:cover;background-position:60% 50%;overflow:hidden">
+      <video src="uploads/shot2_v3.mp4" muted="muted" loop="loop" playsinline="playsinline" poster="uploads/poster-lounge.jpg" preload="metadata" style="width:100%;height:100%;object-fit:cover;object-position:60% 50%;display:block"></video>
     </div>
     <div class="scene-text" style="display:flex;flex-direction:column;justify-content:center;padding:96px 8vw 96px 76px">
       <div style="color:#6E6E73;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:22px">01 — Airport lounges</div>
@@ -317,14 +317,14 @@
       <h2 style="margin:0;max-width:16ch;color:#FAFAFA;font-size:clamp(38px,3.4vw,52px);line-height:1.04;font-weight:700;letter-spacing:-0.04em">A quiet lobby and a live match, at the same time.</h2>
       <p style="margin:26px 0 0;max-width:44ch;color:#8E8E93;font-size:17px;line-height:1.62">Lobby, bar and fitness room screens each get their own channel. The guest chooses which one to hear from the headset — nothing is queued at reception, and the atmosphere of the room is never decided by the loudest television.</p>
     </div>
-    <div class="scene-media" style="position:relative;background:#141416;overflow:hidden">
-      <video src="uploads/shot3_v3.mp4" muted="muted" loop="loop" playsinline="playsinline" poster="uploads/poster-hotel.jpg" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+    <div class="scene-media" style="position:relative;background:#141416;background-image:url(uploads/poster-hotel.jpg);background-size:cover;background-position:center;overflow:hidden">
+      <video src="uploads/shot3_v3.mp4" muted="muted" loop="loop" playsinline="playsinline" poster="uploads/poster-hotel.jpg" preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block"></video>
     </div>
   </div>
 
   <div class="snap scene" data-play-in-view="" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);height:100vh;height:100dvh;min-height:640px;border-top:1px solid rgba(255,255,255,0.1)">
-    <div class="scene-media" style="position:relative;background:#141416;overflow:hidden">
-      <video src="uploads/shot4_v3.mp4" muted="muted" loop="loop" playsinline="playsinline" poster="uploads/poster-bar.jpg" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+    <div class="scene-media" style="position:relative;background:#141416;background-image:url(uploads/poster-bar.jpg);background-size:cover;background-position:center;overflow:hidden">
+      <video src="uploads/shot4_v3.mp4" muted="muted" loop="loop" playsinline="playsinline" poster="uploads/poster-bar.jpg" preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block"></video>
     </div>
     <div class="scene-text" style="display:flex;flex-direction:column;justify-content:center;padding:96px 8vw 96px 76px">
       <div style="color:#6E6E73;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:22px">03 — Bars</div>
@@ -500,7 +500,9 @@
         }
       });
     }, { threshold: 0.5 });
-    document.querySelectorAll('[data-play-in-view]').forEach(function (el) { films.observe(el); });
+    document.querySelectorAll('[data-play-in-view]').forEach(function (el) {
+      films.observe(el.querySelector('.scene-media, .kb-hero-media') || el);
+    });
   }
 
   // Product cards rise in once, then stop being watched.
