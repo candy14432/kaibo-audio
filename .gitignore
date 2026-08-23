@@ -1,2 +1,5 @@
 .DS_Store
 .claude/
+
+# 影片原始檔／舊版本歸檔，不進倉庫（本機保留）
+uploads/archieve/
