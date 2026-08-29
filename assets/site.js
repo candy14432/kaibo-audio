@@ -73,7 +73,11 @@
         var v = e.target.querySelector('video');
         if (!v) return;
         if (e.isIntersecting) {
-          warmNext(e.target);
+          // Warming must not compete with the film the visitor is looking at:
+          // on a phone the two downloads simply halve each other. Wait until
+          // this one can run to the end before starting the next.
+          if (v.readyState >= 4) warmNext(e.target);
+          else v.addEventListener('canplaythrough', function () { warmNext(e.target); }, { once: true });
           if (wasIn) return;                       // already running mid-band
           v.muted = true; v.playsInline = true;
           // data-start holds back a clip whose opening seconds are not the shot.
