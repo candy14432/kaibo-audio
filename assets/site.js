@@ -40,7 +40,11 @@
   frame();
 
   // Each film runs only while its own band is on screen, and opens on frame one.
-  var bands = [].slice.call(document.querySelectorAll('[data-play-in-view]'));
+  // The observer below watches the media box inside each band, not the band
+  // itself, so this list has to hold the same nodes or indexOf will not find
+  // them. Getting that wrong warms bands[0] and resets the hero mid-play.
+  var bands = [].slice.call(document.querySelectorAll('[data-play-in-view]'))
+    .map(function (el) { return el.querySelector('.scene-media, .kb-hero-media') || el; });
   var conn = navigator.connection || {};
   var thrifty = !!conn.saveData;
 
@@ -50,7 +54,9 @@
   // anyway. Skipped when the visitor has asked the browser to save data.
   function warmNext(band) {
     if (thrifty) return;
-    var next = bands[bands.indexOf(band) + 1];
+    var idx = bands.indexOf(band);
+    if (idx < 0) return;
+    var next = bands[idx + 1];
     if (!next) return;
     var nv = next.querySelector('video');
     if (!nv || nv.dataset.warmed) return;
