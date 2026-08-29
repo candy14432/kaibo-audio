@@ -3,11 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kaibo audio — TV Hearing Assistance</title>
+<title>Kaibo audio — Personal Hearing Assistance</title>
 <link rel="stylesheet" href="assets/site.css">
 </head>
-<body data-page="tv">
+<body data-page="personal">
 <div style="background:#0B0B0C">
+
+<!-- ===========================================================================
+     DISABLED RANGE. Nothing links to this page: the Personal tab is inert in the
+     bar on every other page, and this file exists so the range can be previewed
+     by URL and stays in step with shared header/CSS changes. Only the structure
+     is real — the films and the product line-up are placeholders reusing the TV
+     range's assets, and every paragraph is still marked "DRAFT COPY". To switch
+     the range on, set its NAV entry to live.
+     ======================================================================== -->
 
 <header style="position:fixed;top:0;left:0;right:0;z-index:60;background:linear-gradient(to bottom,rgba(11,11,12,0.75),rgba(11,11,12,0));backdrop-filter:blur(6px)">
   <div class="pad" style="max-width:1320px;margin:0 auto;padding:0 44px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:32px">
@@ -17,7 +26,7 @@
     </a>
     <nav class="nav-links" style="display:flex;align-items:center;gap:34px">
       <div class="kb-nav-item" data-nav="tv">
-        <a class="kb-nav-top" href="index.html" aria-current="page">TV Hearing Assistance</a>
+        <a class="kb-nav-top" href="index.html">TV Hearing Assistance</a>
         <div class="kb-drop">
           <a href="index.html#scenes">Where it works</a>
           <a href="index.html#technology">Technology</a>
@@ -33,11 +42,11 @@
         </div>
       </div>
       <div class="kb-nav-item" data-nav="personal">
-        <span class="kb-nav-top" aria-disabled="true">Personal Hearing Assistance</span>
+        <a class="kb-nav-top" href="personal.html" aria-current="page">Personal Hearing Assistance</a>
         <div class="kb-drop">
-          <span aria-disabled="true">Where it works</span>
-          <span aria-disabled="true">Technology</span>
-          <span aria-disabled="true">Products</span>
+          <a href="personal.html#scenes">Where it works</a>
+          <a href="personal.html#technology">Technology</a>
+          <a href="personal.html#products">Products</a>
         </div>
       </div>
       <a class="kb-cta" href="#contact" style="display:inline-flex;align-items:center;height:38px;padding:0 20px;background:#fff;border:1px solid #fff;border-radius:6px;color:#0B0B0C;font-size:15px;font-weight:600">Contact us</a>
@@ -48,7 +57,7 @@
   </div>
   <div class="kb-menu" id="kb-menu">
     <div class="kb-mgroup">
-      <div class="kb-mtitle" aria-current="page"><a href="index.html">TV Hearing Assistance</a></div>
+      <div class="kb-mtitle"><a href="index.html">TV Hearing Assistance</a></div>
       <a href="index.html#scenes">Where it works</a>
       <a href="index.html#technology">Technology</a>
       <a href="index.html#products">Products</a>
@@ -60,10 +69,10 @@
       <a href="tour.html#products">Products</a>
     </div>
     <div class="kb-mgroup">
-      <div class="kb-mtitle" aria-disabled="true">Personal Hearing Assistance</div>
-      <span aria-disabled="true">Where it works</span>
-      <span aria-disabled="true">Technology</span>
-      <span aria-disabled="true">Products</span>
+      <div class="kb-mtitle" aria-current="page"><a href="personal.html">Personal Hearing Assistance</a></div>
+      <a href="personal.html#scenes">Where it works</a>
+      <a href="personal.html#technology">Technology</a>
+      <a href="personal.html#products">Products</a>
     </div>
   </div>
 </header>
@@ -76,13 +85,11 @@
   <div class="kb-hero-copy" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;pointer-events:none;opacity:1">
     <div class="pad" style="max-width:1320px;width:100%;margin:0 auto;padding:0 44px 88px">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;animation:fadeIn 900ms ease both 200ms">
-        
         <span style="color:#C7C7CC;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase">Bluetooth LE Audio broadcast</span>
       </div>
-      <h1 style="margin:0;max-width:15ch;color:#fff;font-size:clamp(52px,7vw,104px);line-height:0.95;font-weight:700;letter-spacing:-0.045em;text-wrap:balance;animation:riseIn 1000ms cubic-bezier(0.16,1,0.3,1) both 320ms">One transmitter, every listener.</h1>
+      <h1 style="margin:0;max-width:15ch;color:#fff;font-size:clamp(52px,7vw,104px);line-height:0.95;font-weight:700;letter-spacing:-0.045em;text-wrap:balance;animation:riseIn 1000ms cubic-bezier(0.16,1,0.3,1) both 320ms">Every conversation, back in reach.</h1>
       <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:60px;margin-top:36px;animation:riseIn 1000ms cubic-bezier(0.16,1,0.3,1) both 520ms">
-        <p style="margin:0;max-width:46ch;color:#C7C7CC;font-size:19px;line-height:1.55">A lightweight open-ear headset for the guest, and the transmitter that feeds it — supplied as one system by Kaibo audio. Broadcast over Bluetooth LE&nbsp;Audio: one channel per screen, no wiring.</p>
-        
+        <p style="margin:0;max-width:46ch;color:#C7C7CC;font-size:19px;line-height:1.55">DRAFT COPY. An open-ear headset that lifts the voice in front of you above the room around you. Replace this paragraph, the films and the products below with the Personal range material.</p>
       </div>
     </div>
   </div>
@@ -91,35 +98,35 @@
 <section id="scenes" style="background:#0B0B0C">
 
   <div class="snap scene" data-play-in-view="" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);height:100vh;height:100dvh;min-height:640px;border-top:1px solid rgba(255,255,255,0.1)">
-    <div class="scene-media" style="position:relative;background:#141416;background-image:url(uploads/poster-lounge.jpg);background-size:cover;background-position:60% 50%;overflow:hidden">
-      <video src="uploads/shot2_v3.mp4" muted="muted" loop="loop" playsinline="playsinline" poster="uploads/poster-lounge.jpg" preload="metadata" style="width:100%;height:100%;object-fit:cover;object-position:60% 50%;display:block"></video>
+    <div class="scene-media" style="position:relative;background:#141416;background-image:url(uploads/poster-hotel.jpg);background-size:cover;background-position:center;overflow:hidden">
+      <video src="uploads/shot3_v3.mp4" muted="muted" loop="loop" playsinline="playsinline" poster="uploads/poster-hotel.jpg" preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block"></video>
     </div>
     <div class="scene-text" style="display:flex;flex-direction:column;justify-content:center;padding:96px 8vw 96px 76px">
-      <div style="color:#6E6E73;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:22px">01 — Airport lounges</div>
-      <h2 style="margin:0;max-width:16ch;color:#FAFAFA;font-size:clamp(38px,3.4vw,52px);line-height:1.04;font-weight:700;letter-spacing:-0.04em">The screen stays muted. The traveller still hears it.</h2>
-      <p style="margin:26px 0 0;max-width:44ch;color:#8E8E93;font-size:17px;line-height:1.62">Lounges run their displays silent to keep the room calm. The audio is broadcast over Bluetooth LE Audio instead, so any guest who wants the news, the match or the gate channel simply listens in — and everyone else keeps the quiet.</p>
+      <div style="color:#6E6E73;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:22px">01 — At home</div>
+      <h2 style="margin:0;max-width:16ch;color:#FAFAFA;font-size:clamp(38px,3.4vw,52px);line-height:1.04;font-weight:700;letter-spacing:-0.04em">The television at your own volume.</h2>
+      <p style="margin:26px 0 0;max-width:44ch;color:#8E8E93;font-size:17px;line-height:1.62">DRAFT COPY — replace with the at-home scenario for the Personal range.</p>
     </div>
   </div>
 
   <div class="snap scene" data-play-in-view="" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);height:100vh;height:100dvh;min-height:640px;border-top:1px solid rgba(255,255,255,0.1)">
     <div class="scene-text" style="display:flex;flex-direction:column;justify-content:center;padding:96px 76px 96px 8vw;order:0">
-      <div style="color:#6E6E73;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:22px">02 — Hotels</div>
-      <h2 style="margin:0;max-width:16ch;color:#FAFAFA;font-size:clamp(38px,3.4vw,52px);line-height:1.04;font-weight:700;letter-spacing:-0.04em">A quiet lobby and a live match, at the same time.</h2>
-      <p style="margin:26px 0 0;max-width:44ch;color:#8E8E93;font-size:17px;line-height:1.62">Lobby, bar and fitness room screens each get their own channel. The guest chooses which one to hear from the headset — nothing is queued at reception, and the atmosphere of the room is never decided by the loudest television.</p>
+      <div style="color:#6E6E73;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:22px">02 — Restaurants &amp; caf&eacute;s</div>
+      <h2 style="margin:0;max-width:16ch;color:#FAFAFA;font-size:clamp(38px,3.4vw,52px);line-height:1.04;font-weight:700;letter-spacing:-0.04em">One voice out of a full room.</h2>
+      <p style="margin:26px 0 0;max-width:44ch;color:#8E8E93;font-size:17px;line-height:1.62">DRAFT COPY — replace with the noisy-venue scenario for the Personal range.</p>
     </div>
-    <div class="scene-media" style="position:relative;background:#141416;background-image:url(uploads/poster-hotel.jpg);background-size:cover;background-position:center;overflow:hidden">
-      <video src="uploads/shot3_v3.mp4" muted="muted" loop="loop" playsinline="playsinline" poster="uploads/poster-hotel.jpg" preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+    <div class="scene-media" style="position:relative;background:#141416;background-image:url(uploads/poster-bar.jpg);background-size:cover;background-position:center;overflow:hidden">
+      <video src="uploads/shot4_v3.mp4" muted="muted" loop="loop" playsinline="playsinline" poster="uploads/poster-bar.jpg" preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block"></video>
     </div>
   </div>
 
   <div class="snap scene" data-play-in-view="" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);height:100vh;height:100dvh;min-height:640px;border-top:1px solid rgba(255,255,255,0.1)">
-    <div class="scene-media" style="position:relative;background:#141416;background-image:url(uploads/poster-bar.jpg);background-size:cover;background-position:center;overflow:hidden">
-      <video src="uploads/shot4_v3.mp4" muted="muted" loop="loop" playsinline="playsinline" poster="uploads/poster-bar.jpg" preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+    <div class="scene-media" style="position:relative;background:#141416;background-image:url(uploads/poster-lounge.jpg);background-size:cover;background-position:60% 50%;overflow:hidden">
+      <video src="uploads/shot2_v3.mp4" muted="muted" loop="loop" playsinline="playsinline" poster="uploads/poster-lounge.jpg" preload="metadata" style="width:100%;height:100%;object-fit:cover;object-position:60% 50%;display:block"></video>
     </div>
     <div class="scene-text" style="display:flex;flex-direction:column;justify-content:center;padding:96px 8vw 96px 76px">
-      <div style="color:#6E6E73;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:22px">03 — Bars</div>
-      <h2 style="margin:0;max-width:16ch;color:#FAFAFA;font-size:clamp(38px,3.4vw,52px);line-height:1.04;font-weight:700;letter-spacing:-0.04em">Your table, your channel.</h2>
-      <p style="margin:26px 0 0;max-width:44ch;color:#8E8E93;font-size:17px;line-height:1.62">Conversation, music, a room at full volume — the commentary never has to compete with any of it. It goes straight to the headset instead, so the guest hears every moment of the match while the bar stays exactly as lively as it is.</p>
+      <div style="color:#6E6E73;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:22px">03 — Meetings &amp; classes</div>
+      <h2 style="margin:0;max-width:16ch;color:#FAFAFA;font-size:clamp(38px,3.4vw,52px);line-height:1.04;font-weight:700;letter-spacing:-0.04em">Nothing missed from the back row.</h2>
+      <p style="margin:26px 0 0;max-width:44ch;color:#8E8E93;font-size:17px;line-height:1.62">DRAFT COPY — replace with the meeting/classroom scenario for the Personal range.</p>
     </div>
   </div>
 
@@ -152,35 +159,35 @@
     <div class="sys-head" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:80px;align-items:end;margin-bottom:64px">
       <div>
         <div style="color:#6E6E73;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:22px">Products</div>
-        <h2 style="margin:0;color:#FAFAFA;font-size:clamp(40px,4vw,56px);line-height:1.02;font-weight:700;letter-spacing:-0.04em">Transmitter and headset, supplied as one solution.</h2>
+        <h2 style="margin:0;color:#FAFAFA;font-size:clamp(40px,4vw,56px);line-height:1.02;font-weight:700;letter-spacing:-0.04em">A headset you wear all day, and what feeds it.</h2>
       </div>
-      <p style="margin:0 0 6px;color:#8E8E93;font-size:17px;line-height:1.62">Nothing here is a component you have to build around. Kaibo audio supplies both halves — the transmitter that takes audio from the source, and the receivers your guests wear — matched and ready to deploy.</p>
+      <p style="margin:0 0 6px;color:#8E8E93;font-size:17px;line-height:1.62">DRAFT COPY — replace with the Personal range product line-up. The layout is the same as the TV page: one feature product, then three supporting products.</p>
     </div>
     <div class="cards feature" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:0;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.1)">
-      <div data-reveal="" style="background:#141416;display:flex;align-items:center;justify-content:center;padding:44px 40px">
-        <img src="uploads/web/img_p3_linkmore.png" alt="Link More" style="width:100%;max-width:620px;height:auto;display:block">
+      <div data-reveal="" style="background:#fff;display:flex;align-items:center;justify-content:center;padding:44px 40px">
+        <img src="uploads/web/img_p2_castone.png" alt="Product name" style="width:100%;max-width:620px;height:auto;display:block">
       </div>
-      <div data-reveal="" style="background:#141416;padding:32px 30px 36px;display:flex;flex-direction:column;justify-content:center">
-        <div style="color:#8E8E93;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:18px">Transmitter</div>
-        <h3 style="margin:0 0 16px;color:#FAFAFA;font-size:clamp(28px,2.4vw,36px);line-height:1.08;font-weight:700;letter-spacing:-0.03em">Link More</h3>
-        <p style="margin:0;color:#8E8E93;font-size:16px;line-height:1.62">Wireless audio transmitter and easy to connect with TV audio output, make TV to broadcast the sound directly.</p>
+      <div data-reveal="" style="background:#fff;padding:32px 30px 36px;display:flex;flex-direction:column;justify-content:center">
+        <div style="color:#8A8A8F;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:18px">Headset</div>
+        <h3 style="margin:0 0 16px;color:#0B0B0C;font-size:clamp(28px,2.4vw,36px);line-height:1.08;font-weight:700;letter-spacing:-0.03em">Product name</h3>
+        <p style="margin:0;color:#57575C;font-size:16px;line-height:1.62">DRAFT COPY — feature product for the Personal range.</p>
       </div>
     </div>
     <div class="cards" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.1);border-top:none">
       <div data-reveal="" style="background:#fff;padding:32px 30px 36px">
-        <div style="height:180px;margin-bottom:28px"><img src="uploads/web/img_p1_linkmic.png" alt="Link Mic" style="width:100%;height:100%;object-fit:contain;display:block"></div>
-        <h3 style="margin:0 0 10px;color:#0B0B0C;font-size:20px;font-weight:700;letter-spacing:-0.02em">Link Mic</h3>
-        <p style="margin:0;color:#57575C;font-size:15px;line-height:1.6">A microphone plugs straight in, so a presenter or a guide becomes their own channel — carried to every headset in the room without a speaker system.</p>
+        <div style="height:180px;margin-bottom:28px"><img src="uploads/web/img_p1_linkmic.png" alt="Product name" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+        <h3 style="margin:0 0 10px;color:#0B0B0C;font-size:20px;font-weight:700;letter-spacing:-0.02em">Product name</h3>
+        <p style="margin:0;color:#57575C;font-size:15px;line-height:1.6">DRAFT COPY — Personal range product.</p>
       </div>
       <div data-reveal="" style="background:#fff;padding:32px 30px 36px">
-        <div style="height:180px;margin-bottom:28px"><img src="uploads/web/img_p4_cast.png" alt="Cast SE" style="width:100%;height:100%;object-fit:contain;display:block"></div>
-        <h3 style="margin:0 0 10px;color:#0B0B0C;font-size:20px;font-weight:700;letter-spacing:-0.02em">Cast SE</h3>
-        <p style="margin:0;color:#57575C;font-size:15px;line-height:1.6">Lightweight and comfortable, worn all day. Open-ear design and single ear to simple wear for listening.</p>
+        <div style="height:180px;margin-bottom:28px"><img src="uploads/web/img_p4_cast.png" alt="Product name" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+        <h3 style="margin:0 0 10px;color:#0B0B0C;font-size:20px;font-weight:700;letter-spacing:-0.02em">Product name</h3>
+        <p style="margin:0;color:#57575C;font-size:15px;line-height:1.6">DRAFT COPY — Personal range product.</p>
       </div>
       <div data-reveal="" style="background:#fff;padding:32px 30px 36px">
-        <div style="height:180px;margin-bottom:28px"><img src="uploads/web/img_p2_castone.png" alt="Cast One" style="width:100%;height:100%;object-fit:contain;display:block"></div>
-        <h3 style="margin:0 0 10px;color:#0B0B0C;font-size:20px;font-weight:700;letter-spacing:-0.02em">Cast One</h3>
-        <p style="margin:0;color:#57575C;font-size:15px;line-height:1.6">Lightweight and comfortable, worn all day. Open-ear design keeps the listener aware of their surroundings — essential in a bar or a lounge.</p>
+        <div style="height:180px;margin-bottom:28px"><img src="uploads/web/img_p3_linkmore.png" alt="Product name" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+        <h3 style="margin:0 0 10px;color:#0B0B0C;font-size:20px;font-weight:700;letter-spacing:-0.02em">Product name</h3>
+        <p style="margin:0;color:#57575C;font-size:15px;line-height:1.6">DRAFT COPY — Personal range product.</p>
       </div>
 </div>
   </div>
