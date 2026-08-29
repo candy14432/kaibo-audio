@@ -40,6 +40,25 @@
   frame();
 
   // Each film runs only while its own band is on screen, and opens on frame one.
+  var bands = [].slice.call(document.querySelectorAll('[data-play-in-view]'));
+  var conn = navigator.connection || {};
+  var thrifty = !!conn.saveData;
+
+  // The films are large enough that a band which only starts downloading when
+  // the visitor reaches it sits on its poster for seconds. Warm the next one
+  // while the current one plays — by then it is the film they are about to see
+  // anyway. Skipped when the visitor has asked the browser to save data.
+  function warmNext(band) {
+    if (thrifty) return;
+    var next = bands[bands.indexOf(band) + 1];
+    if (!next) return;
+    var nv = next.querySelector('video');
+    if (!nv || nv.dataset.warmed) return;
+    nv.dataset.warmed = '1';
+    nv.preload = 'auto';
+    nv.load();
+  }
+
   if (typeof IntersectionObserver !== 'undefined') {
     var films = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
@@ -48,6 +67,7 @@
         var v = e.target.querySelector('video');
         if (!v) return;
         if (e.isIntersecting) {
+          warmNext(e.target);
           if (wasIn) return;                       // already running mid-band
           v.muted = true; v.playsInline = true;
           // data-start holds back a clip whose opening seconds are not the shot.
