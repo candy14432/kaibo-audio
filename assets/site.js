@@ -2,7 +2,11 @@
   'use strict';
   var header   = document.querySelector('header');
   var scenes   = document.querySelectorAll('.scene');
-  var lastBand = scenes.length ? scenes[scenes.length - 1] : null;  // 4th full-screen band
+  // The bar turns solid once the last dark band is behind it. On the product
+  // pages that band is the final .scene; a page built without scenes names its
+  // own instead, so the bar still knows when it is over light ground.
+  var lastBand = scenes.length ? scenes[scenes.length - 1]
+                               : document.querySelector('[data-header-solid-after]');
   var themed   = document.querySelectorAll('[data-theme]');
   var heroMedia = document.querySelector('.kb-hero-media');
   var heroCopy  = document.querySelector('.kb-hero-copy');
