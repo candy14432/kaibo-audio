@@ -246,6 +246,37 @@
   .kb-mtitle[aria-disabled="true"] { color: #5A5A5F; }
   header[data-solid="1"][data-theme="light"] .kb-mtitle[aria-disabled="true"] { color: #A1A1A6; }
 
+
+  /* ---- Vertical timeline (About). The rail is the item's own left border, so
+     it closes up by itself however many entries the story ends up with. Above
+     960px the year is pulled out into a gutter; below it the year simply sits
+     above its entry and the rail runs unbroken past both. ---- */
+  .kb-timeline { position: relative; }
+  .kb-tl-item { position: relative; padding: 0 0 56px 40px;
+    border-left: 1px solid rgba(255,255,255,.16); }
+  .kb-tl-item:last-child { padding-bottom: 0; border-left-color: transparent; }
+  .kb-tl-item::before { content: ''; position: absolute; left: -5px; top: 7px;
+    width: 9px; height: 9px; border-radius: 50%; background: #FAFAFA; }
+  .kb-tl-year { color: #FAFAFA; font-size: 15px; font-weight: 600;
+    letter-spacing: .02em; margin-bottom: 12px; }
+  .kb-tl-tag { display: inline-block; margin-left: 10px; padding: 3px 9px;
+    border: 1px solid rgba(255,255,255,.22); border-radius: 3px;
+    color: #8E8E93; font-size: 10px; font-weight: 600; letter-spacing: .16em;
+    text-transform: uppercase; vertical-align: 2px; }
+  @media (min-width: 961px) {
+    .kb-timeline { padding-left: 156px; }
+    .kb-tl-year { position: absolute; left: -156px; top: 0; width: 128px;
+      margin-bottom: 0; text-align: right; }
+    .kb-tl-tag { display: block; margin: 8px 0 0; }
+  }
+
+
+  /* The story photographs are 16:9; the box holds that ratio so the picture is
+     never cropped, and paints behind it while it loads. */
+  .kb-tl-media { margin-top: 26px; max-width: 560px; aspect-ratio: 16 / 9;
+    background: #141416; overflow: hidden; }
+  @supports not (aspect-ratio: 1) { .kb-tl-media { height: 315px; } }
+
   /* ---- Technology cards: two per row on a desktop, stacked on a phone. With
      four of them the dividers can no longer sit in one card's inline style, so
      they are worked out from each card's position and stay correct whether the
