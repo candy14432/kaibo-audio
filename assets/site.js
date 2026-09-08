@@ -112,7 +112,9 @@
     });
   }
 
-  // Product cards rise in once, then stop being watched.
+  // Product cards and the story entries rise in once, then stop being watched:
+  // an element is unobserved the moment it arrives, so a second pass over the
+  // section — back up, or down again — is completely still.
   var reveal = document.querySelectorAll('[data-reveal]');
   if (typeof IntersectionObserver !== 'undefined') {
     var entrance = new IntersectionObserver(function (entries) {
