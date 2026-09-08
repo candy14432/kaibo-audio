@@ -149,6 +149,8 @@
   .kb-nav-top::after { content: ''; width: 5px; height: 5px; margin-top: -3px;
     border-right: 1px solid currentColor; border-bottom: 1px solid currentColor;
     transform: rotate(45deg); }
+  /* About us opens no menu, so it carries no caret. */
+  .kb-nav-item[data-nav="about"] .kb-nav-top::after { display: none; }
   .kb-drop { position: absolute; top: 76px; left: 50%; transform: translateX(-50%);
     min-width: 214px; padding: 6px 0; background: #0B0B0C;
     border: 1px solid rgba(255,255,255,.14); display: none; }
