@@ -288,3 +288,46 @@
     .tech-cards > div { border-right: none !important; border-bottom: 1px solid #E4E4E1 !important; }
     .tech-cards > div:last-child { border-bottom: none !important; }
   }
+
+
+  /* ---- Product cards (About): the whole card is the link, so the hover has to
+     read from anywhere on it. The picture pushes in behind its own frame and
+     the Explore cue takes a rule and moves its arrow — no shadow, the card
+     stays flat in the divider grid. The zoom rides on a pseudo-element that
+     inherits the card's background, because the picture is an inline
+     background-image on the frame itself — scaling the frame would scale the
+     layout box with it. The card
+     never takes a transform of its own: [data-reveal] is already animating one
+     on the way in and the two would fight. ---- */
+  .kb-card-link { transition: background-color .3s ease; }
+  .kb-card-media { position: relative; overflow: hidden; }
+  .kb-card-media::before { content: ''; position: absolute; inset: 0;
+    background: inherit; transform-origin: center;
+    transition: transform .7s cubic-bezier(.16,1,.3,1); }
+  .kb-card-go { display: inline-block; margin-top: 22px; padding-bottom: 3px;
+    color: #0B0B0C; font-size: 14px; font-weight: 600; }
+  .kb-card-arrow { display: inline-block; margin-left: 7px;
+    transition: transform .35s cubic-bezier(.16,1,.3,1); }
+  /* the rule under the cue grows from the left rather than blinking on */
+  .kb-card-go::after { content: ''; display: block; height: 1px; margin-top: 5px;
+    background: #0B0B0C; transform: scaleX(0); transform-origin: left;
+    transition: transform .4s cubic-bezier(.16,1,.3,1); }
+
+  @media (hover: hover) and (pointer: fine) {
+    .kb-card-link:hover { background: #FBFBFA !important; }
+    .kb-card-link:hover .kb-card-media::before { transform: scale(1.06); }
+    .kb-card-link:hover .kb-card-arrow { transform: translateX(5px); }
+    .kb-card-link:hover .kb-card-go::after { transform: scaleX(1); }
+  }
+  /* keyboard focus gets the same cue, plus a ring it can actually be seen by */
+  .kb-card-link:focus-visible { outline: 2px solid #0B0B0C; outline-offset: -2px; }
+  .kb-card-link:focus-visible .kb-card-media::before { transform: scale(1.06); }
+  .kb-card-link:focus-visible .kb-card-arrow { transform: translateX(5px); }
+  .kb-card-link:focus-visible .kb-card-go::after { transform: scaleX(1); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .kb-card-media::before, .kb-card-arrow, .kb-card-go::after,
+    .kb-card-link { transition: none; }
+    .kb-card-link:hover .kb-card-media::before,
+    .kb-card-link:focus-visible .kb-card-media::before { transform: none; }
+  }
