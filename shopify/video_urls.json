@@ -1,0 +1,7 @@
+{
+  "_comment": "Shopify stores an uploaded film as a Video media object, not a plain file, so 'name.mp4' | file_url does not resolve it. Each film's real CDN URL goes here and build_templates.py substitutes it. Find one in Content > Files: its preview image is /preview_images/<hash>..., and the film itself is https://cdn.shopify.com/videos/c/o/v/<hash>.mp4",
+  "Tour_shot0_v1.mp4": "https://cdn.shopify.com/videos/c/o/v/f180f39fb6fa4fbcb78338abf49c7b56.mp4",
+  "Tour_shot1_v2.mp4": "https://cdn.shopify.com/videos/c/o/v/ea928a72180045889c422f43a1cb7b63.mp4",
+  "Tour_shot2_v2.mp4": "https://cdn.shopify.com/videos/c/o/v/89cf48c21dba4227adfafb3d6ced8246.mp4",
+  "Tour_shot3_v2.mp4": "https://cdn.shopify.com/videos/c/o/v/efbe1f0d6c354ca280531ad981518a2d.mp4"
+}

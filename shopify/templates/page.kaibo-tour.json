@@ -64,7 +64,7 @@
     "hero": {
       "type": "kaibo-hero",
       "settings": {
-        "video": "Tour_shot0_v1.mp4",
+        "video": "https://cdn.shopify.com/videos/c/o/v/f180f39fb6fa4fbcb78338abf49c7b56.mp4",
         "poster": "kaibo-poster-tour-hero.jpg",
         "focus": "center",
         "start": "",
@@ -82,7 +82,7 @@
           "type": "scene",
           "settings": {
             "media_side": "left",
-            "video": "Tour_shot1_v2.mp4",
+            "video": "https://cdn.shopify.com/videos/c/o/v/ea928a72180045889c422f43a1cb7b63.mp4",
             "poster": "kaibo-poster-tour-museum.jpg",
             "focus": "center",
             "start": "",
@@ -95,7 +95,7 @@
           "type": "scene",
           "settings": {
             "media_side": "right",
-            "video": "Tour_shot2_v2.mp4",
+            "video": "https://cdn.shopify.com/videos/c/o/v/89cf48c21dba4227adfafb3d6ced8246.mp4",
             "poster": "kaibo-poster-tour-expo.jpg",
             "focus": "center",
             "start": "",
@@ -108,7 +108,7 @@
           "type": "scene",
           "settings": {
             "media_side": "left",
-            "video": "Tour_shot3_v2.mp4",
+            "video": "https://cdn.shopify.com/videos/c/o/v/efbe1f0d6c354ca280531ad981518a2d.mp4",
             "poster": "kaibo-poster-tour-landmark.jpg",
             "focus": "center",
             "start": "",

@@ -19,13 +19,25 @@ OUT = os.path.join(ROOT, 'shopify', 'templates')
 
 VIDEO_EXT = ('.mp4', '.mov', '.webm')
 
+# Shopify keeps an uploaded film as a Video media object rather than a plain
+# file, so file_url cannot find it by name. video_urls.json holds each film's
+# real CDN address; a film missing from it falls back to its bare name.
+try:
+    VIDEO_URLS = json.load(io.open(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), 'video_urls.json'),
+        encoding='utf-8'))
+except (IOError, ValueError):
+    VIDEO_URLS = {}
+
 
 def asset(path):
     """uploads/web/foo.png -> kaibo-foo.png (theme asset) or foo.mp4 (Files)."""
     if not path:
         return ''
     name = os.path.basename(path.strip().strip('"\''))
-    return name if name.lower().endswith(VIDEO_EXT) else 'kaibo-' + name
+    if not name.lower().endswith(VIDEO_EXT):
+        return 'kaibo-' + name
+    return VIDEO_URLS.get(name, name)
 
 
 def text(fragment):
