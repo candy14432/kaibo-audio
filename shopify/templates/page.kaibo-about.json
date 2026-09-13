@@ -9,7 +9,7 @@
           "settings": {
             "key": "tv",
             "label": "TV Hearing Assistance",
-            "url": "/",
+            "url": "/pages/kaibo-tv",
             "show_subnav": true
           }
         },
@@ -51,7 +51,7 @@
         "logo_light": "kaibo-logo_kaibo_light.webp",
         "logo_dark": "kaibo-logo_kaibo_dark.webp",
         "logo_alt": "Kaibo audio",
-        "home_url": "/",
+        "home_url": "/pages/kaibo-tv",
         "active": "about",
         "sub_1": "Where it works",
         "sub_2": "Technology",
@@ -157,7 +157,7 @@
             "image": "kaibo-poster-hero.jpg",
             "title": "TV Hearing Assistance",
             "body": "Next-generation LE Audio and Auracast™ broadcast, so the television at home arrives low-latency and crystal clear without disturbing anyone else in the room.",
-            "url": "/",
+            "url": "/pages/kaibo-tv",
             "link_label": "Explore"
           }
         },

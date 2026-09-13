@@ -196,7 +196,7 @@ def story_of(page):
             'settings': {'anchor': 'story', 'eyebrow': eyebrow, 'heading': heading, 'body': body}}
 
 
-PAGE_URL = {'index.html': '/', 'tour.html': '/pages/kaibo-tour',
+PAGE_URL = {'index.html': '/pages/kaibo-tv', 'tour.html': '/pages/kaibo-tour',
             'personal.html': '/pages/kaibo-personal', 'about.html': '/pages/kaibo-about'}
 
 
@@ -277,7 +277,7 @@ def header_of(page, active):
                          'menu_label': 'Menu'}}
 
 
-PAGES = [('index.html', 'index', 'tv'), ('tour.html', 'page.kaibo-tour', 'tour'),
+PAGES = [('index.html', 'page.kaibo-tv', 'tv'), ('tour.html', 'page.kaibo-tour', 'tour'),
          ('personal.html', 'page.kaibo-personal', 'personal'),
          ('about.html', 'page.kaibo-about', 'about')]
 

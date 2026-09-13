@@ -10,32 +10,32 @@ assets/      kaibo-site.css, kaibo-site.js and every image the pages use
 layout/      kaibo.liquid - a bare layout, so Narrative's own header and
              footer do not sit on top of the Kaibo bar
 sections/    nine kaibo-* sections
-templates/   index.json plus page.kaibo-tour / -personal / -about
+templates/   page.kaibo-tv / -tour / -personal / -about
 ```
 
-The TV range is the front door, the way `index.html` is on the static site, so
-it is the theme's home template rather than a fourth page. Everything else is
-named `kaibo-*`, so copying this in adds to Narrative rather than replacing any
-of it.
+Every file is named `kaibo-*`, so pushing this adds to the theme rather than
+replacing any of it.
 
-**The one exception is `templates/index.json`**, which does replace whatever
-homepage that theme has now. Keep a copy first if it matters:
-
-```bash
-npx @shopify/cli@latest theme pull --store psa-tw --theme 150948642969 \
-  --only templates/index.json --path ./backup
-```
+The TV range is a page of its own rather than the theme's home. Narrative is a
+Liquid-template theme and already carries `templates/index.liquid`; Shopify
+refuses an `index.json` beside it, and taking the homepage would have meant
+deleting theirs.
 
 ## Pushing it
 
+Device authorization mails a code to the store owner's inbox, so pushes use a
+Theme Access token instead (apps.shopify.com/theme-access, scoped to
+`write_themes`, mailed to whoever needs it). Keep it out of the shell history:
+
 ```bash
-npx @shopify/cli@latest theme push --store psa-tw --theme 150948642969 \
+SHOPIFY_CLI_THEME_TOKEN=$(cat ~/.kaibo-theme-token) \
+npx @shopify/cli@latest theme push --store psa-tw --theme <id> \
   --path shopify --nodelete
 ```
 
-`--nodelete` keeps every remote file that is not in this folder. Theme
-150948642969 is the draft "Narrative - Kaibo WIP", so nothing reaches the
-public until it is published.
+`--nodelete` keeps every remote file that is not in this folder. The themes are
+150948642969 (draft, "Narrative - Kaibo WIP") and 118422143129 (live,
+"Narrative"); the live one needs `--allow-live`.
 
 ## What has to happen once, by hand
 
@@ -52,15 +52,19 @@ does not appear after the upload, open Content > Files, copy its link, and
 paste the whole URL into that section's video field: the sections take either a
 file name or a full link.
 
-**Three pages, with these handles.** Online Store > Pages > Add page, then set
+**Four pages, with these handles.** Online Store > Pages > Add page, then set
 the theme template on each. The handles are what the bar links to, so they have
 to match or the tabs will 404.
 
 | Page | Handle | Template |
 | --- | --- | --- |
+| TV Hearing Assistance | `kaibo-tv` | kaibo-tv |
 | Tour Hearing Assistance | `kaibo-tour` | kaibo-tour |
 | Personal Hearing Assistance | `kaibo-personal` | kaibo-personal |
 | About us | `kaibo-about` | kaibo-about |
+
+The template picker in the page editor reads the **live** theme, not a draft,
+so the templates have to exist on the live theme before they can be chosen.
 
 **The contact form.** Unlike the static build it posts for real, through
 Shopify's own contact form. Enquiries go to the address in Settings >
