@@ -8,7 +8,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- comment -%}
+    The homepage has no page title of its own, so it would otherwise fall back
+    to the shop's SEO title, which is a product line rather than the company.
+  {%- endcomment -%}
+  {%- if request.page_type == 'index' -%}
+  <title>Kaibo Audio</title>
+  {%- else -%}
   <title>{{ page_title }}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}</title>
+  {%- endif -%}
   {%- if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif -%}
   {{ content_for_header }}
 </head>
