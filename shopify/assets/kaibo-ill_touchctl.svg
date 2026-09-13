@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 64">
+<style>
+.s{fill:none;stroke:#0B0B0C;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.d{fill:#0B0B0C}
+.faint{stroke-opacity:.35}
+/* exactly one control is lit at a time, cycling left to right */
+.k1{animation:sel 3.6s linear infinite}
+.k2{animation:sel 3.6s linear infinite;animation-delay:-2.4s}
+.k3{animation:sel 3.6s linear infinite;animation-delay:-1.2s}
+@keyframes sel{0%,29%{fill-opacity:1}33%,100%{fill-opacity:0}}
+.send{transform-box:view-box;transform-origin:78px 32px;animation:send 3.6s ease-out infinite;animation-delay:.3s}
+.s2{animation-delay:.58s}
+@keyframes send{0%{opacity:0;transform:scale(.55)}25%{opacity:.9}60%{opacity:.25}100%{opacity:0;transform:scale(1.15)}}
+@media (prefers-reduced-motion:reduce){.k1,.k2,.k3,.send{animation:none}.k1{fill-opacity:1}.k2,.k3{fill-opacity:0}.send{opacity:.5}}
+</style>
+<!-- the case front is a screen: three controls, one chosen at a time -->
+<rect class="s" x="20" y="17" width="46" height="30" rx="6"/>
+<path class="s faint" d="M26 23h34"/>
+<rect class="s faint" x="26" y="27" width="34" height="15" rx="2"/>
+<circle class="s" cx="33" cy="34.5" r="3.2"/><circle class="d k1" cx="33" cy="34.5" r="3.2"/>
+<circle class="s" cx="43" cy="34.5" r="3.2"/><circle class="d k2" cx="43" cy="34.5" r="3.2"/>
+<circle class="s" cx="53" cy="34.5" r="3.2"/><circle class="d k3" cx="53" cy="34.5" r="3.2"/>
+<path class="s send"    d="M73 26a10 10 0 0 1 0 12"/>
+<path class="s send s2" d="M80 21a18 18 0 0 1 0 22"/>
+<rect class="s" x="-6" y="-13" width="12" height="26" rx="6" transform="translate(114 32) rotate(10)"/>
+</svg>

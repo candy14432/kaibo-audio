@@ -1,0 +1,259 @@
+{
+  "layout": "kaibo",
+  "sections": {
+    "header": {
+      "type": "kaibo-header",
+      "blocks": {
+        "tv": {
+          "type": "nav_item",
+          "settings": {
+            "key": "tv",
+            "label": "TV Hearing Assistance",
+            "url": "/",
+            "show_subnav": true
+          }
+        },
+        "tour": {
+          "type": "nav_item",
+          "settings": {
+            "key": "tour",
+            "label": "Tour Hearing Assistance",
+            "url": "/pages/kaibo-tour",
+            "show_subnav": true
+          }
+        },
+        "personal": {
+          "type": "nav_item",
+          "settings": {
+            "key": "personal",
+            "label": "Personal Hearing Assistance",
+            "url": "/pages/kaibo-personal",
+            "show_subnav": true
+          }
+        },
+        "about": {
+          "type": "nav_item",
+          "settings": {
+            "key": "about",
+            "label": "About us",
+            "url": "/pages/kaibo-about",
+            "show_subnav": false
+          }
+        }
+      },
+      "block_order": [
+        "tv",
+        "tour",
+        "personal",
+        "about"
+      ],
+      "settings": {
+        "logo_light": "kaibo-logo_kaibo_light.webp",
+        "logo_dark": "kaibo-logo_kaibo_dark.webp",
+        "logo_alt": "Kaibo audio",
+        "home_url": "/",
+        "active": "about",
+        "sub_1": "Where it works",
+        "sub_2": "Technology",
+        "sub_3": "Products",
+        "cta_label": "Contact us",
+        "cta_url": "#contact",
+        "menu_label": "Menu"
+      }
+    },
+    "hero": {
+      "type": "kaibo-hero",
+      "settings": {
+        "video": "",
+        "poster": "kaibo-about-hero.jpg",
+        "focus": "center",
+        "start": "",
+        "eyebrow": "About Kaibo audio",
+        "heading": "Sound. Connection. Life.",
+        "body": "Founded in Texas in 2020, on a simple belief: whether it is the raw sound of nature or carefully crafted music, sound is the medium that connects our daily lives, our travels and the world around us.",
+        "body_width": "48ch",
+        "overlay": "linear-gradient(to right,rgba(11,11,12,0.70) 0%,rgba(11,11,12,0.42) 34%,rgba(11,11,12,0) 64%),linear-gradient(to bottom,rgba(0,0,0,0.30) 0%,rgba(0,0,0,0.06) 32%,rgba(11,11,12,0.38) 80%,rgba(11,11,12,0.66) 100%)"
+      }
+    },
+    "story": {
+      "type": "kaibo-story",
+      "blocks": {
+        "milestone_1": {
+          "type": "milestone",
+          "settings": {
+            "year": "2020",
+            "tag": "",
+            "heading": "Founded in Texas.",
+            "body": "Kaibo audio was born out of a simple desire to combine a passion for music and travel while staying present to what is going on around us. Our inaugural product, Kaibo Buds, was one of the first true bone-conduction headphones in an earbud style.",
+            "image": "kaibo-our_story_hor_1.jpg",
+            "image_alt": "Kaibo Buds worn open-ear, the earbud sitting clear of the ear canal"
+          }
+        },
+        "milestone_2": {
+          "type": "milestone",
+          "settings": {
+            "year": "2022",
+            "tag": "",
+            "heading": "Crowdfunded, over $700,000 raised.",
+            "body": "We launched our first crowdfunding campaign with Kaibo Flex, another first-of-its-kind bone-conduction device with a portable charging dock. The campaign raised over $700,000 and taught us lessons that made the company better and stronger. We remain grateful for the support the crowdfunding community showed us.",
+            "image": "kaibo-our_story_hor_2.webp",
+            "image_alt": "Kaibo Flex worn over the ear while driving"
+          }
+        },
+        "milestone_3": {
+          "type": "milestone",
+          "settings": {
+            "year": "2023 and beyond",
+            "tag": "",
+            "heading": "A growing collection, still open-ear.",
+            "body": "With a growing range of both premium and accessible bone-conduction headphones, we stayed committed to products that combine open-ear audio quality and unique features at a price people can reach.",
+            "image": "kaibo-our_story_hor_3.webp",
+            "image_alt": "An open-ear Kaibo headset worn outdoors"
+          }
+        },
+        "milestone_4": {
+          "type": "milestone",
+          "settings": {
+            "year": "October 2026",
+            "tag": "Upcoming",
+            "heading": "CEATEC, Tokyo.",
+            "body": "Kaibo audio exhibits at CEATEC 2026 in Makuhari Messe, 13 to 16 October, alongside Japan Mobility Show Bizweek.",
+            "image": "",
+            "image_alt": ""
+          }
+        },
+        "milestone_5": {
+          "type": "milestone",
+          "settings": {
+            "year": "February 2027",
+            "tag": "Upcoming",
+            "heading": "Integrated Systems Europe, Barcelona.",
+            "body": "ISE 2027 at Fira de Barcelona, 2 to 5 February. Stand CS804, Granvia ground floor.",
+            "image": "",
+            "image_alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "milestone_1",
+        "milestone_2",
+        "milestone_3",
+        "milestone_4",
+        "milestone_5"
+      ],
+      "settings": {
+        "anchor": "story",
+        "eyebrow": "Our story",
+        "heading": "From one pair of earbuds to three ways of listening.",
+        "body": "Kaibo audio is built on the continuous research and application of bone-conduction technology: taking what the laboratory proves and folding it into something a person is willing to wear all day. The goal is to protect hearing rather than wear it down."
+      }
+    },
+    "experiences": {
+      "type": "kaibo-experiences",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "image": "kaibo-poster-hero.jpg",
+            "title": "TV Hearing Assistance",
+            "body": "Next-generation LE Audio and Auracast™ broadcast, so the television at home arrives low-latency and crystal clear without disturbing anyone else in the room.",
+            "url": "/",
+            "link_label": "Explore"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "image": "kaibo-poster-tour-hero.jpg",
+            "title": "Tour Hearing Assistance",
+            "body": "Lightweight wireless open-ear headphones built for travel: guide commentary comes through clearly while the traveller stays naturally aware of their surroundings.",
+            "url": "/pages/kaibo-tour",
+            "link_label": "Explore"
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "image": "kaibo-personal-hero.jpg",
+            "title": "Personal Hearing Assistance",
+            "body": "Professional sound-compensation algorithms, strong noise reduction and natural reproduction, for seamless listening protection through an ordinary day.",
+            "url": "/pages/kaibo-personal",
+            "link_label": "Explore"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
+      "settings": {
+        "anchor": "experiences",
+        "eyebrow": "What we make",
+        "heading": "Three core listening experiences.",
+        "body": "Open, high-quality listening means something different in a living room, on a guided tour and across an ordinary day. Each of the three is built for its own situation rather than adapted from the others."
+      }
+    },
+    "values": {
+      "type": "kaibo-values",
+      "blocks": {
+        "value_1": {
+          "type": "value",
+          "settings": {
+            "title": "Innovation",
+            "body": "Kaibo continuously pushes boundaries and introduces innovative solutions so that customers can make the best use of the technology available to them."
+          }
+        },
+        "value_2": {
+          "type": "value",
+          "settings": {
+            "title": "Accessibility",
+            "body": "As technology progresses, so should accessibility. High-quality audio experiences should be available to everyone, not only to the people who can pay the most for them."
+          }
+        },
+        "value_3": {
+          "type": "value",
+          "settings": {
+            "title": "Connection",
+            "body": "Kaibo strives for harmony between a personal listening experience and the life going on around it. With that connection, we can truly listen while life happens."
+          }
+        }
+      },
+      "block_order": [
+        "value_1",
+        "value_2",
+        "value_3"
+      ],
+      "settings": {
+        "anchor": "values",
+        "eyebrow": "What we stand for",
+        "heading": "Innovation, accessibility, connection.",
+        "body": "We work with authenticity, humility and responsibility, and treat every Kaibo user with that same care. These three words are the ones we hold the products to."
+      }
+    },
+    "contact": {
+      "type": "kaibo-contact",
+      "settings": {
+        "anchor": "contact",
+        "eyebrow": "Partner with Kaibo audio",
+        "heading": "Let's talk.",
+        "body": "Tell us which product you are looking at and we will come back with pricing, demo units and whatever else you need to get it in front of people.",
+        "products": "Link More, Link Mic, Cast SE, Cast One, Ozen Pro, Ozen Buds, Ozen Dots, Not sure yet",
+        "thanks_title": "Thank you. We have it.",
+        "thanks_body": "A partnership manager at Kaibo audio will be in touch about pricing and demo-unit availability.",
+        "footer_logo": "kaibo-logo_kaibo_dark.webp",
+        "footer_logo_alt": "Kaibo audio",
+        "tagline": "Sound. Connection. Life.",
+        "copyright": "© 2026 Kaibo audio"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "hero",
+    "story",
+    "experiences",
+    "values",
+    "contact"
+  ]
+}

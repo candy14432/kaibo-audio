@@ -1,0 +1,77 @@
+<section id="{{ section.settings.anchor }}" data-theme="light" class="snap" style="box-sizing:border-box;position:relative;overflow:hidden;background:#FAFAFA;color:#0B0B0C;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;padding:110px 0 0">
+  <div class="kb-ripple" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="pad contact-grid" style="position:relative;z-index:1;max-width:1320px;margin:0 auto;padding:0 44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:96px;align-items:start;flex:1;align-content:center">
+    <div>
+      <div style="color:#8A8A8F;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:22px">{{ section.settings.eyebrow }}</div>
+      <h2 style="margin:0;max-width:16ch;color:#0B0B0C;font-size:clamp(40px,4vw,56px);line-height:1.02;font-weight:700;letter-spacing:-0.04em">{{ section.settings.heading }}</h2>
+      <p style="margin:26px 0 0;max-width:44ch;color:#57575C;font-size:17px;line-height:1.62">{{ section.settings.body }}</p>
+    </div>
+    <div style="background:#fff;border:1px solid #E4E4E1;padding:40px 38px">
+      {%- comment -%}
+        Unlike the static build, this posts for real: Shopify's contact form
+        mails the address set in Settings > Notifications.
+      {%- endcomment -%}
+      {%- form 'contact', id: 'kb-contact' -%}
+        {%- if form.posted_successfully? -%}
+        <div style="min-height:264px;display:flex;flex-direction:column;justify-content:center;gap:14px">
+          <div style="color:#0B0B0C;font-size:26px;font-weight:600;letter-spacing:-0.025em">{{ section.settings.thanks_title }}</div>
+          <p style="margin:0;color:#57575C;font-size:16px;line-height:1.6">{{ section.settings.thanks_body }}</p>
+        </div>
+        {%- else -%}
+        <div style="display:flex;flex-direction:column;gap:24px">
+          {%- if form.errors -%}
+          <p style="margin:0;color:#B3261E;font-size:15px;line-height:1.6">{{ form.errors.messages['form'] | default: section.settings.error_text }}</p>
+          {%- endif -%}
+          <label style="display:flex;flex-direction:column;gap:8px"><span style="color:#8A8A8F;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase">{{ section.settings.label_name }}</span><input type="text" name="contact[name]" value="{{ form.name }}" style="height:42px;border:none;border-bottom:1px solid #D6D6D2;background:none;font-size:16px;color:#0B0B0C;outline:none"></label>
+          <label style="display:flex;flex-direction:column;gap:8px"><span style="color:#8A8A8F;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase">{{ section.settings.label_email }}</span><input type="email" name="contact[email]" required value="{{ form.email }}" style="height:42px;border:none;border-bottom:1px solid #D6D6D2;background:none;font-size:16px;color:#0B0B0C;outline:none"></label>
+          <label style="display:flex;flex-direction:column;gap:8px"><span style="color:#8A8A8F;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase">{{ section.settings.label_product }}</span>
+            <select name="contact[Product of interest]" style="height:42px;border:none;border-bottom:1px solid #D6D6D2;background:none;font-size:16px;color:#0B0B0C;outline:none">
+              {%- assign options = section.settings.products | split: ',' -%}
+              {%- for option in options -%}
+              <option value="{{ option | strip }}">{{ option | strip }}</option>
+              {%- endfor -%}
+            </select>
+          </label>
+          <button type="submit" style="margin-top:12px;height:50px;background:#0B0B0C;color:#fff;border:none;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer">{{ section.settings.submit_label }}</button>
+        </div>
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+  </div>
+  <div style="position:relative;z-index:1;margin-top:auto;width:100%;padding:26px 0;border-top:1px solid #E4E4E1">
+    <div class="pad foot" style="max-width:1320px;margin:0 auto;padding:0 44px;display:flex;align-items:center;justify-content:space-between;gap:40px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <img class="wordmark" src="{{ section.settings.footer_logo | asset_url }}" alt="{{ section.settings.footer_logo_alt }}" style="height:24px;width:auto;display:block">
+        <span style="color:#8A8A8F;font-size:13px">{{ section.settings.tagline }}</span>
+      </div>
+      <div style="color:#8A8A8F;font-size:13px">{{ section.settings.copyright }}</div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Kaibo contact",
+  "settings": [
+    { "type": "text", "id": "anchor", "label": "Anchor id", "default": "contact" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Partner with Kaibo audio" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Let's talk." },
+    { "type": "inline_richtext", "id": "body", "label": "Body" },
+    { "type": "header", "content": "Form" },
+    { "type": "text", "id": "label_name", "label": "Name label", "default": "Name" },
+    { "type": "text", "id": "label_email", "label": "Email label", "default": "Work email" },
+    { "type": "text", "id": "label_product", "label": "Product label", "default": "Product you are interested in" },
+    { "type": "textarea", "id": "products", "label": "Product options", "info": "Separated by commas", "default": "Link More, Link Mic, Cast SE, Cast One, Ozen Pro, Ozen Buds, Ozen Dots, Not sure yet" },
+    { "type": "text", "id": "submit_label", "label": "Button label", "default": "Send enquiry" },
+    { "type": "text", "id": "error_text", "label": "Error message", "default": "Something went wrong. Please check the fields and try again." },
+    { "type": "text", "id": "thanks_title", "label": "Thank you title", "default": "Thank you. We have it." },
+    { "type": "text", "id": "thanks_body", "label": "Thank you body", "default": "A partnership manager at Kaibo audio will be in touch about pricing and demo-unit availability." },
+    { "type": "header", "content": "Footer" },
+    { "type": "text", "id": "footer_logo", "label": "Logo file name", "default": "kaibo-logo_kaibo_dark.webp" },
+    { "type": "text", "id": "footer_logo_alt", "label": "Logo alt text", "default": "Kaibo audio" },
+    { "type": "text", "id": "tagline", "label": "Tagline", "default": "Sound. Connection. Life." },
+    { "type": "text", "id": "copyright", "label": "Copyright", "default": "© 2026 Kaibo audio" }
+  ],
+  "presets": [{ "name": "Kaibo contact" }]
+}
+{% endschema %}

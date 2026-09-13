@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 64">
+<style>
+.s{fill:none;stroke:#0B0B0C;stroke-width:1.3;stroke-linecap:round}
+.trk{stroke-opacity:.3}
+.d{fill:#0B0B0C}
+.h{transform-box:view-box;transform-origin:0 0;animation:h 4.4s cubic-bezier(.65,0,.35,1) infinite}
+.h2{animation-delay:-.55s}.h3{animation-delay:-1.1s}.h4{animation-delay:-1.65s}.h5{animation-delay:-2.2s}
+@keyframes h{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+@media (prefers-reduced-motion:reduce){.h{animation:none}}
+</style>
+<!-- five bands, handles finding their own level -->
+<path class="s trk" d="M20 12v40M46 12v40M72 12v40M98 12v40"/>
+<path class="s trk" d="M124 12v40"/>
+<rect class="d h"  x="15" y="38" width="10" height="3.4" rx="1.7"/>
+<rect class="d h h2" x="41" y="24" width="10" height="3.4" rx="1.7"/>
+<rect class="d h h3" x="67" y="43" width="10" height="3.4" rx="1.7"/>
+<rect class="d h h4" x="93" y="30" width="10" height="3.4" rx="1.7"/>
+<rect class="d h h5" x="119" y="36" width="10" height="3.4" rx="1.7"/>
+</svg>

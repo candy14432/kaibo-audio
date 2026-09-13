@@ -1,0 +1,20 @@
+{%- comment -%}
+  The Kaibo pages carry their own fixed bar and their own footer, so they are
+  rendered on a bare layout rather than inside Narrative's chrome. Templates
+  opt in with "layout": "kaibo".
+{%- endcomment -%}
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page_title }}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}</title>
+  {%- if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif -%}
+  {{ content_for_header }}
+</head>
+<body>
+  <div style="background:#0B0B0C">
+    {{ content_for_layout }}
+  </div>
+</body>
+</html>

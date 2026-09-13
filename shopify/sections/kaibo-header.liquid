@@ -1,0 +1,82 @@
+{{ 'kaibo-site.css' | asset_url | stylesheet_tag }}
+{% comment %}
+  site.js reads the whole document as soon as it runs, so on a theme it has to
+  be deferred: as a section it would otherwise execute above the bands it needs
+  to find. On the static site it sat at the end of <body> instead.
+{% endcomment %}
+<script src="{{ 'kaibo-site.js' | asset_url }}" defer></script>
+
+<header style="position:fixed;top:0;left:0;right:0;z-index:60;background:linear-gradient(to bottom,rgba(11,11,12,0.75),rgba(11,11,12,0));backdrop-filter:blur(6px)">
+  <div class="pad" style="max-width:1320px;margin:0 auto;padding:0 44px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:32px">
+    <a href="{{ section.settings.home_url }}" style="display:flex;align-items:center;gap:12px" aria-label="{{ section.settings.logo_alt }}">
+      <img class="wordmark logo-on-dark" src="{{ section.settings.logo_light | asset_url }}" alt="{{ section.settings.logo_alt }}" style="height:30px;width:auto;display:block">
+      <img class="wordmark logo-on-light" src="{{ section.settings.logo_dark | asset_url }}" alt="" aria-hidden="true" style="height:30px;width:auto;display:none">
+    </a>
+    <nav class="nav-links" style="display:flex;align-items:center;gap:34px">
+      {%- for block in section.blocks -%}
+      <div class="kb-nav-item" data-nav="{{ block.settings.key }}" {{ block.shopify_attributes }}>
+        <a class="kb-nav-top" href="{{ block.settings.url }}"{% if block.settings.key == section.settings.active %} aria-current="page"{% endif %}>{{ block.settings.label }}</a>
+        {%- if block.settings.show_subnav -%}
+        <div class="kb-drop">
+          <a href="{{ block.settings.url }}#scenes">{{ section.settings.sub_1 }}</a>
+          <a href="{{ block.settings.url }}#technology">{{ section.settings.sub_2 }}</a>
+          <a href="{{ block.settings.url }}#products">{{ section.settings.sub_3 }}</a>
+        </div>
+        {%- endif -%}
+      </div>
+      {%- endfor -%}
+      <a class="kb-cta" href="{{ section.settings.cta_url }}" style="display:inline-flex;align-items:center;height:38px;padding:0 20px;background:#fff;border:1px solid #fff;border-radius:6px;color:#0B0B0C;font-size:15px;font-weight:600">{{ section.settings.cta_label }}</a>
+    </nav>
+    <button class="kb-burger" type="button" aria-label="{{ section.settings.menu_label }}" aria-expanded="false" aria-controls="kb-menu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="kb-menu" id="kb-menu">
+    {%- for block in section.blocks -%}
+    <div class="kb-mgroup">
+      <div class="kb-mtitle"{% if block.settings.key == section.settings.active %} aria-current="page"{% endif %}><a href="{{ block.settings.url }}">{{ block.settings.label }}</a></div>
+      {%- if block.settings.show_subnav -%}
+      <a href="{{ block.settings.url }}#scenes">{{ section.settings.sub_1 }}</a>
+      <a href="{{ block.settings.url }}#technology">{{ section.settings.sub_2 }}</a>
+      <a href="{{ block.settings.url }}#products">{{ section.settings.sub_3 }}</a>
+      {%- endif -%}
+    </div>
+    {%- endfor -%}
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Kaibo header",
+  "settings": [
+    { "type": "text", "id": "logo_light", "label": "Logo for dark bar (file name)", "default": "kaibo-logo_kaibo_light.webp" },
+    { "type": "text", "id": "logo_dark", "label": "Logo for light bar (file name)", "default": "kaibo-logo_kaibo_dark.webp" },
+    { "type": "text", "id": "logo_alt", "label": "Logo alt text", "default": "Kaibo audio" },
+    { "type": "url", "id": "home_url", "label": "Logo links to" },
+    { "type": "select", "id": "active", "label": "Tab shown as the current page",
+      "options": [
+        { "value": "tv", "label": "TV" },
+        { "value": "tour", "label": "Tour" },
+        { "value": "personal", "label": "Personal" },
+        { "value": "about", "label": "About" },
+        { "value": "none", "label": "None" }
+      ], "default": "tv" },
+    { "type": "header", "content": "Dropdown labels" },
+    { "type": "text", "id": "sub_1", "label": "First", "default": "Where it works" },
+    { "type": "text", "id": "sub_2", "label": "Second", "default": "Technology" },
+    { "type": "text", "id": "sub_3", "label": "Third", "default": "Products" },
+    { "type": "header", "content": "Call to action" },
+    { "type": "text", "id": "cta_label", "label": "Label", "default": "Contact us" },
+    { "type": "text", "id": "cta_url", "label": "Links to", "default": "#contact" },
+    { "type": "text", "id": "menu_label", "label": "Mobile menu button label", "default": "Menu" }
+  ],
+  "blocks": [
+    { "type": "nav_item", "name": "Tab", "settings": [
+      { "type": "text", "id": "key", "label": "Key (must match the current-page setting)" },
+      { "type": "text", "id": "label", "label": "Label" },
+      { "type": "url", "id": "url", "label": "Links to" },
+      { "type": "checkbox", "id": "show_subnav", "label": "Show dropdown", "default": true }
+    ]}
+  ]
+}
+{% endschema %}

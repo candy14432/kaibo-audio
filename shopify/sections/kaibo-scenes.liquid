@@ -1,0 +1,64 @@
+<section id="{{ section.settings.anchor }}" style="background:#0B0B0C">
+  {%- for block in section.blocks -%}
+{%- comment -%}
+  A film is named by its file in Content > Files, but a pasted CDN link works
+  too: anything already containing a host is used as it stands.
+{%- endcomment -%}
+  {%- assign film = block.settings.video -%}
+  {%- unless film contains '//' or film == blank -%}{%- assign film = film | file_url -%}{%- endunless -%}
+  {%- assign media_first = true -%}
+  {%- if block.settings.media_side == 'right' -%}{%- assign media_first = false -%}{%- endif -%}
+  <div class="snap scene"{% if block.settings.video != blank %} data-play-in-view=""{% endif %} style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);height:100vh;height:100dvh;min-height:640px;border-top:1px solid rgba(255,255,255,0.1)" {{ block.shopify_attributes }}>
+
+    {%- capture scene_media -%}
+    {%- comment -%}
+      A band with a film keeps the still as the poster underneath it; a band
+      with only a photograph shows that photograph directly, so nothing waits
+      on a video that will never load.
+    {%- endcomment -%}
+    {%- if block.settings.video != blank -%}
+    <div class="scene-media" style="position:relative;background:#141416;background-image:url({{ block.settings.poster | asset_url }});background-size:cover;background-position:{{ block.settings.focus }};overflow:hidden">
+      <video src="{{ film }}" muted="muted" loop="loop" playsinline="playsinline" poster="{{ block.settings.poster | asset_url }}" preload="metadata"{% if block.settings.start != blank %} data-start="{{ block.settings.start }}"{% endif %} style="width:100%;height:100%;object-fit:cover;object-position:{{ block.settings.focus }};display:block"></video>
+    </div>
+    {%- else -%}
+    <div class="scene-media" style="position:relative;background:#141416;overflow:hidden">
+      <img src="{{ block.settings.poster | asset_url }}" alt="" aria-hidden="true" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:{{ block.settings.focus }};display:block">
+    </div>
+    {%- endif -%}
+    {%- endcapture -%}
+
+    {%- capture scene_text -%}
+    <div class="scene-text" style="display:flex;flex-direction:column;justify-content:center;padding:{% if media_first %}96px 8vw 96px 76px{% else %}96px 76px 96px 8vw{% endif %}">
+      <div style="color:#6E6E73;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:22px">{{ block.settings.eyebrow }}</div>
+      <h2 style="margin:0;max-width:16ch;color:#FAFAFA;font-size:clamp(38px,3.4vw,52px);line-height:1.04;font-weight:700;letter-spacing:-0.04em">{{ block.settings.heading }}</h2>
+      <p style="margin:26px 0 0;max-width:44ch;color:#8E8E93;font-size:17px;line-height:1.62">{{ block.settings.body }}</p>
+    </div>
+    {%- endcapture -%}
+
+    {%- if media_first -%}{{ scene_media }}{{ scene_text }}{%- else -%}{{ scene_text }}{{ scene_media }}{%- endif -%}
+  </div>
+  {%- endfor -%}
+</section>
+
+{% schema %}
+{
+  "name": "Kaibo scenes",
+  "settings": [
+    { "type": "text", "id": "anchor", "label": "Anchor id", "default": "scenes" }
+  ],
+  "blocks": [
+    { "type": "scene", "name": "Scene", "settings": [
+      { "type": "select", "id": "media_side", "label": "Film sits on the", "options": [
+        { "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }], "default": "left" },
+      { "type": "text", "id": "video", "label": "Video file name" },
+      { "type": "text", "id": "poster", "label": "Image file name", "info": "The film\u0027s poster, or the photograph itself when there is no film" },
+      { "type": "text", "id": "focus", "label": "Crop focus", "default": "center", "info": "A CSS object-position value, e.g. center or 60% 50%" },
+      { "type": "text", "id": "start", "label": "Start the video at (seconds, optional)" },
+      { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+      { "type": "text", "id": "heading", "label": "Heading" },
+      { "type": "inline_richtext", "id": "body", "label": "Body" }
+    ]}
+  ],
+  "presets": [{ "name": "Kaibo scenes" }]
+}
+{% endschema %}

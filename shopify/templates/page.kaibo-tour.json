@@ -1,0 +1,237 @@
+{
+  "layout": "kaibo",
+  "sections": {
+    "header": {
+      "type": "kaibo-header",
+      "blocks": {
+        "tv": {
+          "type": "nav_item",
+          "settings": {
+            "key": "tv",
+            "label": "TV Hearing Assistance",
+            "url": "/",
+            "show_subnav": true
+          }
+        },
+        "tour": {
+          "type": "nav_item",
+          "settings": {
+            "key": "tour",
+            "label": "Tour Hearing Assistance",
+            "url": "/pages/kaibo-tour",
+            "show_subnav": true
+          }
+        },
+        "personal": {
+          "type": "nav_item",
+          "settings": {
+            "key": "personal",
+            "label": "Personal Hearing Assistance",
+            "url": "/pages/kaibo-personal",
+            "show_subnav": true
+          }
+        },
+        "about": {
+          "type": "nav_item",
+          "settings": {
+            "key": "about",
+            "label": "About us",
+            "url": "/pages/kaibo-about",
+            "show_subnav": false
+          }
+        }
+      },
+      "block_order": [
+        "tv",
+        "tour",
+        "personal",
+        "about"
+      ],
+      "settings": {
+        "logo_light": "kaibo-logo_kaibo_light.webp",
+        "logo_dark": "kaibo-logo_kaibo_dark.webp",
+        "logo_alt": "Kaibo audio",
+        "home_url": "/",
+        "active": "tour",
+        "sub_1": "Where it works",
+        "sub_2": "Technology",
+        "sub_3": "Products",
+        "cta_label": "Contact us",
+        "cta_url": "#contact",
+        "menu_label": "Menu"
+      }
+    },
+    "hero": {
+      "type": "kaibo-hero",
+      "settings": {
+        "video": "Tour_shot0_v1.mp4",
+        "poster": "kaibo-poster-tour-hero.jpg",
+        "focus": "center",
+        "start": "",
+        "eyebrow": "Bluetooth LE Audio broadcast",
+        "heading": "One guide, the whole group.",
+        "body": "A bodypack transmitter for the guide and an open-ear headset for every visitor, supplied as one system by Kaibo audio. The guide speaks once, at a normal volume, and the visitor at the back hears it exactly as well as the one in front.",
+        "body_width": "46ch",
+        "overlay": "linear-gradient(to bottom,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.12) 42%,rgba(11,11,12,0.45) 88%,rgba(11,11,12,0.8) 100%)"
+      }
+    },
+    "scenes": {
+      "type": "kaibo-scenes",
+      "blocks": {
+        "scene_1": {
+          "type": "scene",
+          "settings": {
+            "media_side": "left",
+            "video": "Tour_shot1_v2.mp4",
+            "poster": "kaibo-poster-tour-museum.jpg",
+            "focus": "center",
+            "start": "",
+            "eyebrow": "01 — Museums & galleries",
+            "heading": "A guided room that stays quiet.",
+            "body": "Hard floors and high ceilings turn a raised voice into noise for everyone else in the gallery. Broadcasting lets the guide speak normally: the group hears every word, the visitors at the next painting hear none of it, and the room keeps the hush it was built for."
+          }
+        },
+        "scene_2": {
+          "type": "scene",
+          "settings": {
+            "media_side": "right",
+            "video": "Tour_shot2_v2.mp4",
+            "poster": "kaibo-poster-tour-expo.jpg",
+            "focus": "center",
+            "start": "",
+            "eyebrow": "02 — Exhibitions & trade shows",
+            "heading": "Heard across a crowded hall.",
+            "body": "A show floor is loud, and a stand tour competes with everything around it. The commentary goes straight to each visitor's headset instead of over the noise, so the group can gather around the product rather than around the presenter, and nobody drops out at the back."
+          }
+        },
+        "scene_3": {
+          "type": "scene",
+          "settings": {
+            "media_side": "left",
+            "video": "Tour_shot3_v2.mp4",
+            "poster": "kaibo-poster-tour-landmark.jpg",
+            "focus": "center",
+            "start": "",
+            "eyebrow": "03 — Landmarks & memorials",
+            "heading": "The group can spread out.",
+            "body": "Outdoors there is nothing to carry a voice: wind, traffic and the group in front of you take it apart within a few metres. On a broadcast channel visitors can drift, stop for photographs and rejoin without missing anything, and the guide never has to shout the group back together."
+          }
+        }
+      },
+      "block_order": [
+        "scene_1",
+        "scene_2",
+        "scene_3"
+      ],
+      "settings": {
+        "anchor": "scenes"
+      }
+    },
+    "technology": {
+      "type": "kaibo-technology",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "illustration": "kaibo-ill_onedevice.svg",
+            "title": "One device on the guide",
+            "body": "No base station, no aerial to rig, nothing handed out at reception beyond the headsets. The guide clips on Link Mic and the tour starts."
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "illustration": "kaibo-ill_openear.svg",
+            "title": "Open ear, free to move",
+            "body": "Visitors take the guide on an open-ear headset, so the room stays audible around them, and they keep the channel as they drift across it."
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2"
+      ],
+      "settings": {
+        "anchor": "technology",
+        "eyebrow": "Technology",
+        "heading": "Link Mic, worn by the guide.",
+        "body": "Link Mic is the half of the system the guide wears. It takes a headset or lavalier microphone and puts that voice out as a Bluetooth LE Audio broadcast. It is an open standard rather than a closed radio protocol, which is why one guide can reach a whole group without pairing to a single one of them."
+      }
+    },
+    "products": {
+      "type": "kaibo-products",
+      "blocks": {
+        "feature": {
+          "type": "feature",
+          "settings": {
+            "image": "kaibo-img_p1_linkmic.png",
+            "eyebrow": "Transmitter",
+            "title": "Link Mic",
+            "body": "A bodypack transmitter the guide clips on or wears on a lanyard. It takes a headset or lavalier microphone and puts the guide's voice out as one Bluetooth LE Audio channel. There is no base station, and nothing to install at the venue."
+          }
+        },
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "image": "kaibo-img_p4_cast.png",
+            "title": "Cast SE",
+            "body": "A single-ear open hook, worn on one side. The visitor keeps one ear on the room, on the exhibit or the traffic or the person beside them, and takes the guide on the other."
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "image": "kaibo-img_p2_castone.png",
+            "title": "Cast One",
+            "body": "An open-ear neckband for longer routes. It sits clear of the ear canal, stays comfortable across a full day, and is harder to mislay between stops than an earpiece."
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "image": "kaibo-img_p3_linkmore.png",
+            "title": "Link More",
+            "body": "For the fixed points on a route, such as an AV room, a lecture theatre or a screening. It takes audio straight from the source onto its own channel, and the visitor switches over without changing headsets."
+          }
+        }
+      },
+      "block_order": [
+        "feature",
+        "product_1",
+        "product_2",
+        "product_3"
+      ],
+      "settings": {
+        "anchor": "products",
+        "eyebrow": "Products",
+        "heading": "One transmitter for the guide, one headset for each visitor.",
+        "body": "Kaibo audio supplies both halves of the kit. Nothing is paired one to one, so the same channel carries ten visitors or a hundred. Growing a group means handing over one more headset, not adding hardware for the guide.",
+        "card_bg": "light"
+      }
+    },
+    "contact": {
+      "type": "kaibo-contact",
+      "settings": {
+        "anchor": "contact",
+        "eyebrow": "Partner with Kaibo audio",
+        "heading": "Let's talk.",
+        "body": "Tell us which product you are looking at and we will come back with pricing, demo units and whatever else you need to get it in front of people.",
+        "products": "Link More, Link Mic, Cast SE, Cast One, Ozen Pro, Ozen Buds, Ozen Dots, Not sure yet",
+        "thanks_title": "Thank you. We have it.",
+        "thanks_body": "A partnership manager at Kaibo audio will be in touch about pricing and demo-unit availability.",
+        "footer_logo": "kaibo-logo_kaibo_dark.webp",
+        "footer_logo_alt": "Kaibo audio",
+        "tagline": "Sound. Connection. Life.",
+        "copyright": "© 2026 Kaibo audio"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "hero",
+    "scenes",
+    "technology",
+    "products",
+    "contact"
+  ]
+}

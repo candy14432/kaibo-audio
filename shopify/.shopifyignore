@@ -1,0 +1,3 @@
+# Not theme files: the generator and its notes stay out of the store.
+README.md
+build_templates.py

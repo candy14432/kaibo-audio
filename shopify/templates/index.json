@@ -1,0 +1,237 @@
+{
+  "layout": "kaibo",
+  "sections": {
+    "header": {
+      "type": "kaibo-header",
+      "blocks": {
+        "tv": {
+          "type": "nav_item",
+          "settings": {
+            "key": "tv",
+            "label": "TV Hearing Assistance",
+            "url": "/",
+            "show_subnav": true
+          }
+        },
+        "tour": {
+          "type": "nav_item",
+          "settings": {
+            "key": "tour",
+            "label": "Tour Hearing Assistance",
+            "url": "/pages/kaibo-tour",
+            "show_subnav": true
+          }
+        },
+        "personal": {
+          "type": "nav_item",
+          "settings": {
+            "key": "personal",
+            "label": "Personal Hearing Assistance",
+            "url": "/pages/kaibo-personal",
+            "show_subnav": true
+          }
+        },
+        "about": {
+          "type": "nav_item",
+          "settings": {
+            "key": "about",
+            "label": "About us",
+            "url": "/pages/kaibo-about",
+            "show_subnav": false
+          }
+        }
+      },
+      "block_order": [
+        "tv",
+        "tour",
+        "personal",
+        "about"
+      ],
+      "settings": {
+        "logo_light": "kaibo-logo_kaibo_light.webp",
+        "logo_dark": "kaibo-logo_kaibo_dark.webp",
+        "logo_alt": "Kaibo audio",
+        "home_url": "/",
+        "active": "tv",
+        "sub_1": "Where it works",
+        "sub_2": "Technology",
+        "sub_3": "Products",
+        "cta_label": "Contact us",
+        "cta_url": "#contact",
+        "menu_label": "Menu"
+      }
+    },
+    "hero": {
+      "type": "kaibo-hero",
+      "settings": {
+        "video": "shot1_v7.mp4",
+        "poster": "kaibo-poster-hero.jpg",
+        "focus": "center",
+        "start": "",
+        "eyebrow": "Bluetooth LE Audio broadcast",
+        "heading": "One transmitter, every listener.",
+        "body": "A lightweight open-ear headset for the guest, and the transmitter that feeds it, supplied as one system by Kaibo audio. Broadcast over Bluetooth LE Audio: one channel per screen, no wiring.",
+        "body_width": "46ch",
+        "overlay": "linear-gradient(to bottom,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.12) 42%,rgba(11,11,12,0.45) 88%,rgba(11,11,12,0.8) 100%)"
+      }
+    },
+    "scenes": {
+      "type": "kaibo-scenes",
+      "blocks": {
+        "scene_1": {
+          "type": "scene",
+          "settings": {
+            "media_side": "left",
+            "video": "shot2_v3.mp4",
+            "poster": "kaibo-poster-lounge.jpg",
+            "focus": "60% 50%",
+            "start": "",
+            "eyebrow": "01 — Airport lounges",
+            "heading": "The screen stays muted. The traveller still hears it.",
+            "body": "Lounges run their displays silent to keep the room calm. The audio is broadcast over Bluetooth LE Audio instead, so any guest who wants the news, the match or the gate channel simply listens in, and everyone else keeps the quiet."
+          }
+        },
+        "scene_2": {
+          "type": "scene",
+          "settings": {
+            "media_side": "right",
+            "video": "shot3_v3.mp4",
+            "poster": "kaibo-poster-hotel.jpg",
+            "focus": "center",
+            "start": "",
+            "eyebrow": "02 — Hotels",
+            "heading": "A quiet lobby and a live match, at the same time.",
+            "body": "Lobby, bar and fitness room screens each get their own channel. The guest chooses which one to hear from the headset. Nothing is queued at reception, and the atmosphere of the room is never decided by the loudest television."
+          }
+        },
+        "scene_3": {
+          "type": "scene",
+          "settings": {
+            "media_side": "left",
+            "video": "shot4_v3.mp4",
+            "poster": "kaibo-poster-bar.jpg",
+            "focus": "center",
+            "start": "",
+            "eyebrow": "03 — Bars",
+            "heading": "Your table, your channel.",
+            "body": "Conversation, music, a room at full volume. The commentary never has to compete with any of it. It goes straight to the headset instead, so the guest hears every moment of the match while the bar stays exactly as lively as it is."
+          }
+        }
+      },
+      "block_order": [
+        "scene_1",
+        "scene_2",
+        "scene_3"
+      ],
+      "settings": {
+        "anchor": "scenes"
+      }
+    },
+    "technology": {
+      "type": "kaibo-technology",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "illustration": "kaibo-ill_broadcast.svg",
+            "title": "Broadcast, not paired",
+            "body": "A channel is never tied to one device, so a single screen can serve as many listeners as the venue has."
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "illustration": "kaibo-ill_channels.svg",
+            "title": "Many channels, one room",
+            "body": "Several transmitters run in the same space, each as its own channel, and the listener switches between them freely."
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2"
+      ],
+      "settings": {
+        "anchor": "technology",
+        "eyebrow": "Technology",
+        "heading": "Bluetooth LE Audio, the current standard.",
+        "body": "Kaibo builds on the latest Bluetooth LE Audio standard rather than a closed radio protocol. It is an open standard, and the reason many-to-many broadcasting is possible in the first place."
+      }
+    },
+    "products": {
+      "type": "kaibo-products",
+      "blocks": {
+        "feature": {
+          "type": "feature",
+          "settings": {
+            "image": "kaibo-img_p3_linkmore.png",
+            "eyebrow": "Transmitter",
+            "title": "Link More",
+            "body": "Wireless audio transmitter and easy to connect with TV audio output, make TV to broadcast the sound directly."
+          }
+        },
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "image": "kaibo-img_p1_linkmic.png",
+            "title": "Link Mic",
+            "body": "A microphone plugs straight in, so a presenter or a guide becomes their own channel, carried to every headset in the room without a speaker system."
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "image": "kaibo-img_p4_cast.png",
+            "title": "Cast SE",
+            "body": "Lightweight and comfortable, worn all day. Open-ear design and single ear to simple wear for listening."
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "image": "kaibo-img_p2_castone.png",
+            "title": "Cast One",
+            "body": "Lightweight and comfortable, worn all day. Open-ear design keeps the listener aware of their surroundings, which matters in a bar or a lounge."
+          }
+        }
+      },
+      "block_order": [
+        "feature",
+        "product_1",
+        "product_2",
+        "product_3"
+      ],
+      "settings": {
+        "anchor": "products",
+        "eyebrow": "Products",
+        "heading": "Transmitter and headset, supplied as one solution.",
+        "body": "Nothing here is a component you have to build around. Kaibo audio supplies both halves, matched and ready to deploy: the transmitter that takes audio from the source, and the receivers your guests wear.",
+        "card_bg": "dark"
+      }
+    },
+    "contact": {
+      "type": "kaibo-contact",
+      "settings": {
+        "anchor": "contact",
+        "eyebrow": "Partner with Kaibo audio",
+        "heading": "Let's talk.",
+        "body": "Tell us which product you are looking at and we will come back with pricing, demo units and whatever else you need to get it in front of people.",
+        "products": "Link More, Link Mic, Cast SE, Cast One, Ozen Pro, Ozen Buds, Ozen Dots, Not sure yet",
+        "thanks_title": "Thank you. We have it.",
+        "thanks_body": "A partnership manager at Kaibo audio will be in touch about pricing and demo-unit availability.",
+        "footer_logo": "kaibo-logo_kaibo_dark.webp",
+        "footer_logo_alt": "Kaibo audio",
+        "tagline": "Sound. Connection. Life.",
+        "copyright": "© 2026 Kaibo audio"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "hero",
+    "scenes",
+    "technology",
+    "products",
+    "contact"
+  ]
+}

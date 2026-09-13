@@ -1,0 +1,255 @@
+{
+  "layout": "kaibo",
+  "sections": {
+    "header": {
+      "type": "kaibo-header",
+      "blocks": {
+        "tv": {
+          "type": "nav_item",
+          "settings": {
+            "key": "tv",
+            "label": "TV Hearing Assistance",
+            "url": "/",
+            "show_subnav": true
+          }
+        },
+        "tour": {
+          "type": "nav_item",
+          "settings": {
+            "key": "tour",
+            "label": "Tour Hearing Assistance",
+            "url": "/pages/kaibo-tour",
+            "show_subnav": true
+          }
+        },
+        "personal": {
+          "type": "nav_item",
+          "settings": {
+            "key": "personal",
+            "label": "Personal Hearing Assistance",
+            "url": "/pages/kaibo-personal",
+            "show_subnav": true
+          }
+        },
+        "about": {
+          "type": "nav_item",
+          "settings": {
+            "key": "about",
+            "label": "About us",
+            "url": "/pages/kaibo-about",
+            "show_subnav": false
+          }
+        }
+      },
+      "block_order": [
+        "tv",
+        "tour",
+        "personal",
+        "about"
+      ],
+      "settings": {
+        "logo_light": "kaibo-logo_kaibo_light.webp",
+        "logo_dark": "kaibo-logo_kaibo_dark.webp",
+        "logo_alt": "Kaibo audio",
+        "home_url": "/",
+        "active": "personal",
+        "sub_1": "Where it works",
+        "sub_2": "Technology",
+        "sub_3": "Products",
+        "cta_label": "Contact us",
+        "cta_url": "#contact",
+        "menu_label": "Menu"
+      }
+    },
+    "hero": {
+      "type": "kaibo-hero",
+      "settings": {
+        "video": "",
+        "poster": "kaibo-personal-hero.jpg",
+        "focus": "58% 45%",
+        "start": "",
+        "eyebrow": "Personal hearing assistance",
+        "heading": "Life Listening!",
+        "body": "Kaibo audio builds for the people who have spent too long on the quiet side of a room. Hearing is not the end in itself. It is the way back to conversation, to confidence, and to doing things on your own terms.",
+        "body_width": "46ch",
+        "overlay": "linear-gradient(to bottom,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.10) 30%,rgba(11,11,12,0.62) 70%,rgba(11,11,12,0.93) 100%)"
+      }
+    },
+    "scenes": {
+      "type": "kaibo-scenes",
+      "blocks": {
+        "scene_1": {
+          "type": "scene",
+          "settings": {
+            "media_side": "left",
+            "video": "",
+            "poster": "kaibo-personal-table.jpg",
+            "focus": "center",
+            "start": "",
+            "eyebrow": "01 — The family table",
+            "heading": "Everyone talking at once.",
+            "body": "A family table is the hardest room there is, with several voices going at the same time, cutlery, someone answering from the far end. The headset lifts whoever you are facing above all of it, so you follow the thread instead of asking twice."
+          }
+        },
+        "scene_2": {
+          "type": "scene",
+          "settings": {
+            "media_side": "right",
+            "video": "",
+            "poster": "kaibo-personal-commute.jpg",
+            "focus": "center",
+            "start": "",
+            "eyebrow": "02 — Trains and platforms",
+            "heading": "The announcement, over the carriage.",
+            "body": "A full carriage is one long rumble, and the announcement lands on top of it. The aid holds on to what you need to hear instead of turning the whole carriage up with it."
+          }
+        },
+        "scene_3": {
+          "type": "scene",
+          "settings": {
+            "media_side": "left",
+            "video": "",
+            "poster": "kaibo-personal-athome.jpg",
+            "focus": "center",
+            "start": "",
+            "eyebrow": "03 — At home",
+            "heading": "Your own volume, back again.",
+            "body": "A record on, a book open, nobody to ask to repeat themselves. Sound arrives at the level you set it, and the rest of the house stays as quiet as it wants to be."
+          }
+        }
+      },
+      "block_order": [
+        "scene_1",
+        "scene_2",
+        "scene_3"
+      ],
+      "settings": {
+        "anchor": "scenes"
+      }
+    },
+    "technology": {
+      "type": "kaibo-technology",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "illustration": "kaibo-ill_auracast.svg",
+            "title": "Received without a headset",
+            "body": "Where the TV and Tour ranges hand out a receiver, Ozen already is one. The channel is picked up by the aid the wearer has on anyway."
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "illustration": "kaibo-ill_tuning.svg",
+            "title": "Tuned by AI, then by you",
+            "body": "A hearing test in the Ozen app sets the profile, and Ozen AI optimises gain, compression and frequency shaping from it. An EQ adjusts tone and balance from there, over six channels of wide dynamic range compression."
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "illustration": "kaibo-ill_remotemic.svg",
+            "title": "Built-in remote microphone",
+            "body": "Set the case down in front of whoever is speaking and it sends their voice straight to the aid. That is the distance a party or a meeting room usually takes away."
+          }
+        },
+        "card_4": {
+          "type": "card",
+          "settings": {
+            "illustration": "kaibo-ill_touchctl.svg",
+            "title": "Touch based remote controller",
+            "body": "The case is the control as well. One touch starts a broadcast, another moves between noise reduction profiles, with no need to reach for the phone."
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4"
+      ],
+      "settings": {
+        "anchor": "technology",
+        "eyebrow": "Technology",
+        "heading": "Auracast, built into the hearing aid.",
+        "body": "Ozen Pro is a professional hearing aid and Ozen Buds a simpler PSAP, and both carry Bluetooth LE Audio with Auracast. A broadcast put out by a lounge, a bar or a guide arrives in the ear directly, with no second receiver to carry."
+      }
+    },
+    "products": {
+      "type": "kaibo-products",
+      "blocks": {
+        "feature": {
+          "type": "feature",
+          "settings": {
+            "image": "kaibo-prod-ozen-pro.jpg",
+            "eyebrow": "Hearing aid",
+            "title": "Ozen Pro",
+            "body": "The professional aid has a behind-the-ear body with the receiver sitting in the canal, and Bluetooth LE Audio with Auracast built in, so a broadcast reaches it with no headset in between."
+          }
+        },
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "image": "kaibo-prod-ozen-buds.jpg",
+            "title": "Ozen Buds",
+            "body": "The simpler PSAP, for someone starting out. Worn in the ear, and charged in a case that doubles as a remote microphone you can set down beside whoever is speaking."
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "image": "kaibo-prod-ozen-dots.jpg",
+            "title": "Ozen Dots",
+            "body": "The open type. A soft hook holds it clear of the canal, so the room around the wearer stays audible alongside whatever is being sent to them. Its case carries the same remote microphone."
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "image": "kaibo-img_p3_linkmore.png",
+            "title": "Link More",
+            "body": "For the sources at home that do not broadcast on their own, such as the television or the hi-fi. It puts their audio on a channel the aid picks up, so nothing has to be turned up for the room."
+          }
+        }
+      },
+      "block_order": [
+        "feature",
+        "product_1",
+        "product_2",
+        "product_3"
+      ],
+      "settings": {
+        "anchor": "products",
+        "eyebrow": "Products",
+        "heading": "Three ways to hear, and the app that tunes them.",
+        "body": "Ozen Pro is the professional hearing aid. Ozen Buds and Ozen Dots are the simpler PSAPs, one worn in the ear and one held clear of it. All three carry Bluetooth LE Audio with Auracast and are set up from the Ozen app on Apple or Android, hearing test included.",
+        "card_bg": "light"
+      }
+    },
+    "contact": {
+      "type": "kaibo-contact",
+      "settings": {
+        "anchor": "contact",
+        "eyebrow": "Partner with Kaibo audio",
+        "heading": "Let's talk.",
+        "body": "Tell us which product you are looking at and we will come back with pricing, demo units and whatever else you need to get it in front of people.",
+        "products": "Link More, Link Mic, Cast SE, Cast One, Ozen Pro, Ozen Buds, Ozen Dots, Not sure yet",
+        "thanks_title": "Thank you. We have it.",
+        "thanks_body": "A partnership manager at Kaibo audio will be in touch about pricing and demo-unit availability.",
+        "footer_logo": "kaibo-logo_kaibo_dark.webp",
+        "footer_logo_alt": "Kaibo audio",
+        "tagline": "Sound. Connection. Life.",
+        "copyright": "© 2026 Kaibo audio"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "hero",
+    "scenes",
+    "technology",
+    "products",
+    "contact"
+  ]
+}
